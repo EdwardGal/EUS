@@ -1,0 +1,218 @@
+//<MAIN>====================================================================================================
+
+.main {
+   padding: 71px 0px 80px 0px;
+   @media (max-width: $md3+px) {
+      padding: 40px 0px 40px 0px;
+   }
+   &__label {
+      @include adaptiv-value("font-size", 36, 20, 1);
+      line-height: math.div(41, 36) * 100%;
+      font-weight: 700;
+      color: #2f3441;
+      margin-bottom: 65px;
+      @media (max-width: 650px) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__info {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 60px;
+      @media (max-width: $md3+px) {
+         align-items: flex-start;
+      }
+      @media (max-width: 650px) {
+         flex-direction: column;
+         margin-bottom: 30px;
+      }
+   }
+
+   &__logo {
+      @include adaptiv-value("max-width", 231, 160, 1);
+      @media (max-width: 650px) {
+         margin-bottom: 20px;
+      }
+      @media (max-width: $md4+px) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__text {
+      flex: 0 1 825px;
+      @include adaptiv-value("font-size", 18, 16, 1);
+      line-height: math.div(22, 18) * 100%;
+      color: #2f3441;
+      padding-bottom: 7px;
+      @include adaptiv-value("margin-left", 59, 20, 1);
+      @media (max-width: $md2+px) {
+         flex: 0 1 auto;
+      }
+      @media (max-width: 650px) {
+         margin-left: 0;
+      }
+   }
+}
+
+.slider-main {
+   &__container {
+      position: relative;
+      overflow: visible;
+      &::before {
+         content: "";
+         position: absolute;
+         right: 100%;
+         top: 0;
+         z-index: 100;
+         height: 100%;
+         width: 100%;
+         background-color: $whiteColor;
+      }
+   }
+}
+
+.slide {
+   position: relative;
+   padding: 19px 90px 21px 24px;
+   background-color: $greyColor;
+   border-radius: 5px;
+   @media (min-width: $md1+px) {
+      min-width: 360px;
+   }
+   @media (max-width: $md3+px) {
+      padding-right: 60px;
+   }
+   @media (max-width: $md4+px) {
+      padding: 15px 40px 15px 15px;
+   }
+
+   &__body {
+      position: relative;
+      z-index: 100;
+      max-width: 247px;
+      @media (max-width: $md3+px) {
+         max-width: 180px;
+      }
+      @media (max-width: $md4+px) {
+         max-width: 144px;
+      }
+   }
+
+   &__image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+   }
+
+   &__count {
+      display: inline-block;
+      @include adaptiv-value("font-size", 36, 18, 1);
+      font-weight: 700;
+      color: #606981;
+      margin-bottom: 5px;
+   }
+
+   &__label {
+      @include adaptiv-value("font-size", 20, 12, 1);
+      line-height: math.div(24, 20) * 100%;
+      color: #606981;
+   }
+}
+
+.nav-item {
+   margin-top: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 2px solid #296093;
+   }
+   &__pagination {
+      display: flex;
+      align-items: center;
+      margin: 0px 36px;
+   }
+}
+//</MAIN>====================================================================================================
+
+//<SWIPER>====================================================================================================
+
+.swiper-pagination-bullet {
+   background-color: #959595;
+   height: 8px;
+   width: 8px;
+   border-radius: 50%;
+   &:not(:last-child) {
+      margin: 0px 12px 0px 0px;
+   }
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+   height: 11px;
+   width: 11px;
+   background-color: #296093;
+}
+///</SWIPER>====================================================================================================
+
+//<BID>====================================================================================================
+
+.bid {
+   padding: 102px 0px 80px 0px;
+   background-color: $greyColor;
+   @media (max-width: $md3+px) {
+      padding: 40px 0px 40px 0px;
+   }
+   &__columns {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px -15.5px;
+   }
+
+   &__column {
+      flex: 0 1 50%;
+      padding: 0px 15.5px;
+      @media (min-width: $md2+px) {
+         padding-left: 22px;
+      }
+      @media (max-width: $md3+px) {
+         flex: 0 1 100%;
+         &:first-child {
+            margin-bottom: 30px;
+         }
+      }
+      @media (max-width: $md4+px) {
+         &:first-child {
+            margin-bottom: 20px;
+         }
+      }
+   }
+
+   &__image {
+      padding: 0px 0px 75.42% 0px;
+   }
+
+   &__desc {
+      text-align: right;
+      margin-top: 3px;
+      @media (min-width: $md2+px) {
+         padding-right: 35px;
+      }
+      p {
+         @include adaptiv-value("font-size", 18, 14, 1);
+         line-height: math.div(21, 18) * 100%;
+         color: #2f3441;
+         &:last-child {
+            margin-right: -5px;
+         }
+      }
+   }
+}
+
+//</BID>====================================================================================================
